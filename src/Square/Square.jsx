@@ -4,12 +4,20 @@ export default class Square extends React.Component{
 
     render(){
         const {gameData, handleSquareClick} = this.props;
-        const backgroundcolor = gameData.randomId === this.props.id && !gameData.clicked ? '#FFFF00' : "#0000FF";
+        const classes = ['square'];
+        if (gameData.randomId === this.props.id) {
+            console.log(gameData.clicked, 'clike');
+            classes.push(gameData.clicked ? 'square_clicked' : 'square_fired');
+            console.log(classes, 'classes');
+        }
+        //const backgroundColor = gameData.randomId === this.props.id && !gameData.clicked ? '#d44e54' : '#d44e547d';
         return (
             <div>
                 <div key = {this.props.id}
-                     style={{backgroundColor: backgroundcolor, width : "50px", height: "50px", borderStyle: "solid"} }
-                     onClick={() => handleSquareClick(this.props.id)}> </div>
+                     className={classes.join(' ')}
+                     onClick={() => handleSquareClick(this.props.id)}>
+
+                </div>
             </div>
         );
     }

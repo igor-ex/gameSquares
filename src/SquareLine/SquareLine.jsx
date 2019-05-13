@@ -14,7 +14,7 @@ export default class SquareLine extends React.Component{
             );
         });
         return (
-            <div style={{display: "flex", flexDirection:"row" }}>
+            <div className="field__line">
                 {elements}
             </div>
         );

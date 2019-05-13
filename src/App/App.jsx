@@ -1,5 +1,7 @@
 import React from 'react';
 import Field from '../Field/Field';
+import Controls from "../Controls/Controls";
+import '../style.css';
 
 export default class App extends React.Component{
     state = {
@@ -122,7 +124,7 @@ export default class App extends React.Component{
         return this.checkGameEnd(scores);
     };
 
-    gameThreshold = 5;
+    gameThreshold = 10;
     roles = Object.freeze({
         PC: 'pcScore',
         USER: 'userScore'
@@ -132,7 +134,7 @@ export default class App extends React.Component{
         if (scores.pcScore === this.gameThreshold || scores.userScore === this.gameThreshold) {
             let result;
             if (scores.pcScore === this.gameThreshold) {
-                result = 'PC wun! Looser';
+                result = 'PC won! Looser';
             } else {
                 result = 'You\'re the winner. Congratulations'
             }
@@ -159,23 +161,23 @@ export default class App extends React.Component{
     };
 
     render(){
+        const props = {
+            startGame: this.startGame,
+            stopGame: this.stopGame,
+            setInterval: this.setInterval,
+            interval: this.state.interval,
+            pcScore: this.state.pcScore,
+            userScore: this.state.userScore,
+            result: this.state.result
+        };
         return (
-            <div>
+            <div className="container">
+                <Controls {...props}/>
                 <Field
                     stateArr = {this.state.arr()}
                     gameData = {this.state.gameData}
-                    handleSquareClick={this.handleSquareClick}/>
-                <button onClick={this.startGame}>Start</button>
-                <button onClick={this.stopGame}>Stop</button>
-                <input type="range"
-                       min="500"
-                       max="3000"
-                       value={this.state.interval}
-                       onChange={this.setInterval}
-                /> {this.state.interval}
-                <div>pc score: {this.state.pcScore}</div>
-                <div>user score: {this.state.userScore}</div>
-                <div>result: {this.state.result}</div>
+                    handleSquareClick={this.handleSquareClick}
+                />
             </div>
         );
     }

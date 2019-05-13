@@ -12,7 +12,7 @@ export default class Field extends React.Component{
             </div>)
         });
         return (
-            <div style={{display: "flex", flexDirection:"column" }}>
+            <div className="field">
                 {elements}
             </div>
         );
