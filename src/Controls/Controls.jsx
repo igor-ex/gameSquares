@@ -21,9 +21,9 @@ export default class Controls extends React.Component {
                        value={interval}
                        onChange={setInterval}
                 /> {interval}
-                <div>pc score: {pcScore}</div>
-                <div>user score: {userScore}</div>
-                <div>result: {result}</div>
+                <div>PC score: {pcScore}</div>
+                <div>User score: {userScore}</div>
+                <div>Result: {result}</div>
             </div>
         );
     }

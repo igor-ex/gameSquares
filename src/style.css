@@ -1,4 +1,8 @@
 
+@font-face {
+  font-family: 'Acme-Regular';
+  src: url('static/Acme-Regular.ttf');
+}
 * {
   box-sizing: border-box;
 }
@@ -10,8 +14,10 @@ html, body {
 body {
   background: #000000bd;
   color: white;
+}
+body, button {
   font-size: 24px;
-  font-family: tahoma, sans-serif;
+  font-family: Acme-Regular, sans-serif;
 }
 button {
   padding: 20px;
@@ -22,7 +28,6 @@ button {
   margin: 5px;
   outline: none;
   border-radius: 3px;
-  font-size: 24px;
 }
 #root {
   height: 100%;

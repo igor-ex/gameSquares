@@ -97,9 +97,10 @@ export default class App extends React.Component{
             return;
         }
         if (this.state.gameData.randomId === id && !this.state.gameData.clicked) {
-            this.setState(() => {
+            this.setState(state => {
                 return {
                     gameData: {
+                        ...state.gameData,
                         clicked: true
                     }
                 }
