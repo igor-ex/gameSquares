@@ -4,18 +4,22 @@ import Controls from "../Controls/Controls";
 import '../style.css';
 
 export default class App extends React.Component{
+    len = 10;
     state = {
-        arr : function() {
-            let arr = [[],[],[],[],[],[],[],[],[],[]];
+        arr : (() => {
+            const arr = new Array(this.len);
+            for (let i = 0; i < this.len; i++) {
+                arr[i] = new Array(10);
+            }
             let id = 0;
-            for (let i = 0; i < 10; i++) {
-                for (let j = 0; j < 10; j++) {
+            for (let i = 0; i < this.len; i++) {
+                for (let j = 0; j < this.len; j++) {
                     arr[i][j] = id;
                     id++;
                 }
             }
             return arr;
-        },
+        })(),
         interval: 1000,
         gameData: {
             randomId: null,
@@ -175,7 +179,7 @@ export default class App extends React.Component{
             <div className="container">
                 <Controls {...props}/>
                 <Field
-                    stateArr = {this.state.arr()}
+                    stateArr = {this.state.arr}
                     gameData = {this.state.gameData}
                     handleSquareClick={this.handleSquareClick}
                 />
