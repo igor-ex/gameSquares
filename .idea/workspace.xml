@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3bd99d3-48a7-41ce-bcef-0c7a1cddec81" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/MessageBlock.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat.7z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/color-square game Костя Игорь Дима Лёша.7z" beforeDir="false" />
-    </list>
+    <list default="true" id="c3bd99d3-48a7-41ce-bcef-0c7a1cddec81" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -135,11 +131,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-375" />
-    <option name="y" value="121" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1169" />
+    <option name="height" value="920" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -229,12 +225,12 @@
       <workItem from="1558007151289" duration="2252000" />
       <workItem from="1559762601554" duration="599000" />
       <workItem from="1559830107581" duration="658000" />
-      <workItem from="1559900989305" duration="1118000" />
+      <workItem from="1559900989305" duration="1760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62997000" />
+    <option name="totallyTimeSpent" value="63639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
